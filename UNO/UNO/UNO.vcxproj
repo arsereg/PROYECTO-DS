@@ -147,6 +147,7 @@
     <ClInclude Include="Cementerio.h" />
     <ClInclude Include="Cola.h" />
     <ClInclude Include="Especial.h" />
+    <ClInclude Include="ListaCarta.h" />
     <ClInclude Include="Mazo.h" />
     <ClInclude Include="NodoCarta.h" />
     <ClInclude Include="Numero.h" />
@@ -159,7 +160,9 @@
     <ClCompile Include="Cementerio.cpp" />
     <ClCompile Include="Cola.cpp" />
     <ClCompile Include="Especial.cpp" />
+    <ClCompile Include="ListaCarta.cpp" />
     <ClCompile Include="Mazo.cpp" />
+    <ClCompile Include="NodoCarta.cpp" />
     <ClCompile Include="Numero.cpp" />
     <ClCompile Include="Pila.cpp" />
     <ClCompile Include="stdafx.cpp">

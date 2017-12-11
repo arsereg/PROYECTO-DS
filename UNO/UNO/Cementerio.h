@@ -10,6 +10,6 @@ private:
 public:
 	Cementerio();
 	~Cementerio();
-	void ponerCarta(Carta);
+	void ponerCarta(Carta *);
 	//Mazo darVuelta();
 };

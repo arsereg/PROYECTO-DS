@@ -8,7 +8,7 @@ private:
 public:
 	Mazo(Pila *p);
 	~Mazo();
-	Carta sacarCarta();
+	Carta * sacarCarta();
 	void ponerCarta(Carta *x);
 };
 

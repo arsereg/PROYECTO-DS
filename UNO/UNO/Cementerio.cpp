@@ -10,7 +10,7 @@ Cementerio::Cementerio() {
 Cementerio::~Cementerio() {
 }
 
-void Cementerio::ponerCarta(Carta cartanueva) {
+void Cementerio::ponerCarta(Carta * cartanueva) {
 	this->cementerioCartas->insertar(cartanueva);
 }
 

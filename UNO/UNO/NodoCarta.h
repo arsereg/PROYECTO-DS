@@ -4,12 +4,15 @@
 
 class NodoCarta {
 public:
-	Carta info;
+	Carta * info;
+	
 	NodoCarta *sig;
 
-	NodoCarta(const Carta& d) : info(d), sig() {}
+	NodoCarta(Carta* d) : info(d), sig() {}
 	NodoCarta(const NodoCarta& copyNode) : info(copyNode.info), sig() {}
 	NodoCarta::~NodoCarta() {}
+	NodoCarta * getSig();
+	void setSig(NodoCarta * e);
 };
 
 #endif /* NODO_H */
