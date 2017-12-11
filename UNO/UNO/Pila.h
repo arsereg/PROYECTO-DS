@@ -6,6 +6,7 @@
 
 class Pila {
 public:
+	int longitud = 0;
 	Pila();
 	Pila(const Pila& orig);
 	virtual ~Pila();
@@ -14,9 +15,8 @@ public:
 	bool push(NodoCarta *x);
 	NodoCarta* pop();
 	void recorrer();
-
 private:
-	int longitud = 0;
+	
 	NodoCarta *primero;
 	NodoCarta *ultimo;
 };

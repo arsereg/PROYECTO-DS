@@ -81,6 +81,7 @@ Mazo::Mazo() {
 	for (int i = 0; i < listaEspeciales->getLongitud(); i++) {
 		laPila->push(listaEspeciales->get(i));
 	}
+	cartasPila = laPila;
 	
 }
 

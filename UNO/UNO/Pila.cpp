@@ -3,9 +3,8 @@
 #include "Numero.h"
 
 Pila::Pila() {
-	this->primero = NULL;
-	this->ultimo = NULL;
-	this->longitud = 0;
+	primero = NULL;
+	ultimo = NULL;
 }
 
 Pila::Pila(const Pila& orig) {
@@ -15,7 +14,7 @@ Pila::~Pila() {
 }
 
 int Pila::longPila() {
-	return this->longitud;
+	return longitud;
 }
 
 bool Pila::esVacia() {
@@ -49,8 +48,7 @@ bool Pila::push(NodoCarta *e) {
 
 
 NodoCarta* Pila::pop() {
-	cout << longPila();
-	/*NodoCarta *val = this->ultimo;
+	NodoCarta *val = this->ultimo;
 	int index = 0;
 	NodoCarta *auxRecorrido = this->primero;
 	NodoCarta *aux = this->primero;
@@ -62,11 +60,9 @@ NodoCarta* Pila::pop() {
 	this->ultimo = prev;
 	this->ultimo->sig = nullptr;
 	this->longitud--;
-	return val;*/
+	return val;
 
-	Carta * unaCarta = new Numero(1, Carta::rojo);
-	NodoCarta * test = new NodoCarta(unaCarta);
-	return test;
+
 }
 
 void Pila::recorrer() {
