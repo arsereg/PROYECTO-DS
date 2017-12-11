@@ -148,7 +148,7 @@
     <ClInclude Include="Cola.h" />
     <ClInclude Include="Especial.h" />
     <ClInclude Include="Mazo.h" />
-    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="NodoCarta.h" />
     <ClInclude Include="Numero.h" />
     <ClInclude Include="Pila.h" />
     <ClInclude Include="stdafx.h" />
