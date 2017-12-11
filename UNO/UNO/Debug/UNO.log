@@ -1,11 +1,4 @@
-﻿  stdafx.cpp
-  UNO.cpp
-  Pila.cpp
-  Numero.cpp
+﻿  Pila.cpp
   Mazo.cpp
-  Especial.cpp
-  Cola.cpp
-  Cementerio.cpp
-  Carta.cpp
   Generating Code...
   UNO.vcxproj -> C:\Users\Esteban\Desktop\UNO\UNO\Debug\UNO.exe

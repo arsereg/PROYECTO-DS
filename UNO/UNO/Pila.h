@@ -11,8 +11,8 @@ public:
 	virtual ~Pila();
 	int longPila();
 	bool esVacia();
-	bool push(NodoCarta x);
-	NodoCarta pop();
+	bool push(NodoCarta *x);
+	NodoCarta* pop();
 	void recorrer();
 
 private:

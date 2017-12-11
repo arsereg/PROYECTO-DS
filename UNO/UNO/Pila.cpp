@@ -26,8 +26,8 @@ bool Pila::esVacia() {
 }
 
 
-bool Pila::push(NodoCarta e) {
-	NodoCarta *nuevo = new NodoCarta(e);
+bool Pila::push(NodoCarta *e) {
+	NodoCarta *nuevo = new NodoCarta(*e);
 	if (nuevo == nullptr) {
 		return false;
 	}
@@ -47,8 +47,8 @@ bool Pila::push(NodoCarta e) {
 }
 
 
-NodoCarta Pila::pop() {
-	NodoCarta val = this->ultimo->info;
+NodoCarta* Pila::pop() {
+	NodoCarta *val = this->ultimo;
 	int index = 0;
 	NodoCarta *auxRecorrido = this->primero;
 	NodoCarta *aux = this->primero;
