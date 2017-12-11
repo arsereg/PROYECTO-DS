@@ -3,7 +3,7 @@
 
 
 Cementerio::Cementerio() {
-	this->cementerioCartas = new Cola<Carta>;
+	this->cementerioCartas = new Cola;
 }
 
 
@@ -11,7 +11,7 @@ Cementerio::~Cementerio() {
 }
 
 void Cementerio::ponerCarta(Carta cartanueva) {
-	this->cementerioCartas->insertarElem(cartanueva);
+	this->cementerioCartas->insertar(cartanueva);
 }
 
 

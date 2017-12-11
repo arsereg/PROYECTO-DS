@@ -1,7 +1,6 @@
-#include "Cola.h"
 #include "stdafx.h"
-
 #include <iostream>
+#include "Cola.h"
 
 
 Cola::Cola() {
@@ -12,7 +11,6 @@ Cola::Cola() {
 
 Cola::Cola(const Cola& orig) {
 }
-
 
 Cola::~Cola() {
 }
@@ -55,12 +53,11 @@ NodoCarta Cola::atender() {
 	return val;
 }
 
-template <class T>
-void Cola<T>::recorrer() {
-	Nodo<T> *auxRecorrido = this->primero;
+void Cola::recorrer() {
+	NodoCarta *auxRecorrido = this->primero;
 	int index = 0;
 	while (index <= this->longitud && auxRecorrido != nullptr) {
-		std::cout << auxRecorrido->info;
+		//std::cout << auxRecorrido->info->getColor();
 		std::cout << "->";
 		auxRecorrido = auxRecorrido->sig;
 		index++;

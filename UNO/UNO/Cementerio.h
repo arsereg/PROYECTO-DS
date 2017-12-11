@@ -6,7 +6,7 @@
 class Cementerio
 {
 private:
-	Cola<Carta>* cementerioCartas;
+	Cola* cementerioCartas;
 public:
 	Cementerio();
 	~Cementerio();
