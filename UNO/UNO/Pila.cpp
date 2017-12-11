@@ -1,8 +1,5 @@
-
+#include "stdafx.h"
 #include "Pila.h"
-
-
-#include <iostream>
 
 Pila::Pila() {
 	this->primero = nullptr;
