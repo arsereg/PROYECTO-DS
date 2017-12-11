@@ -9,6 +9,8 @@ public:
 	ListaCarta();
 	int getLongitud(void);   //analizadora
 	void add(Carta * e);          //analizadora
+	void addRandom(Carta * e);
+	NodoCarta * get(int i);
 	NodoCarta* getTope(void);   //Modificadora
 	void setLongitud(int l);  // Modificadora
 	void setTope(NodoCarta *);  //Modificadora

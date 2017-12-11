@@ -7,6 +7,7 @@ private:
 	Pila* cartasPila;
 public:
 	Mazo(Pila *p);
+	Mazo();
 	~Mazo();
 	Carta * sacarCarta();
 	void ponerCarta(Carta *x);

@@ -1,8 +1,7 @@
 #include "stdafx.h"
 #include "ListaCarta.h"
-#include <iostream>
 #include "NodoCarta.h"
-
+#include <random>
 ListaCarta::ListaCarta() {
 	longitud = 0;
 	tope = NULL;
@@ -23,6 +22,35 @@ void ListaCarta::add(Carta * e)
 	}
 	longitud++;
 
+}
+
+void ListaCarta::addRandom(Carta * e)
+{
+	NodoCarta * nuevo = new NodoCarta(e);
+	if (tope == NULL) {
+		tope = nuevo;
+	}
+	else {
+		std::random_device seeder;
+		std::mt19937 engine(seeder());
+		std::uniform_int_distribution<int> dist(0, longitud -1);
+		int random = dist(engine);
+		NodoCarta * posicion = tope;
+		for (int i = 0; i < random -1; i++) {
+			posicion->getSig();
+		}
+		nuevo->setSig(posicion->getSig());
+		posicion->setSig(nuevo);
+	}
+}
+
+NodoCarta * ListaCarta::get(int i)
+{
+	NodoCarta * result = tope;
+	for (int k = 0; k < i; k++) {
+		result = result->getSig();
+	}
+	return result;
 }
 
 NodoCarta * ListaCarta::getTope(void)

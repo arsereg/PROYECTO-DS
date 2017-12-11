@@ -1,13 +1,78 @@
 #include "stdafx.h"
 #include "Mazo.h"
-
+#include "ListaCarta.h"
+#include "Numero.h"
+#include "Especial.h"
 
 Mazo::Mazo(Pila *p) {
 	this->cartasPila = p;
 }
 
+Mazo::Mazo() {
+	ListaCarta * rojas = new ListaCarta();
+	ListaCarta * verdes = new ListaCarta();
+	ListaCarta * amarillas = new ListaCarta();
+	ListaCarta * azules = new ListaCarta();
+	ListaCarta * unaLista = NULL;
+	for (int i = 0; i < 4; i++) {
+		Carta::Color unColor;
+		switch (i) {
+		case 0: unColor = Carta::rojo;
+			unaLista = rojas;
+			break;
+		case 1: unColor = Carta::verde;
+			unaLista = verdes;
+			break;
+		case 2: unColor = Carta::amarillo;
+			unaLista = amarillas;
+			break;
+		case 3: unColor = Carta::azul;
+			unaLista = azules;
+			break;
+		default: cout << "error" << endl;
+		}
+		for (int j = 0; j < 2; j++) {
+			for (int k = 1; k < 10; k++) {
+				Numero * unNumero = new Numero(k, unColor);
+				unaLista->addRandom(unNumero);
+			}
+		}
+		Numero * unNumero = new Numero(0, unColor);
+		unaLista->addRandom(unNumero);
+		Especial * unEspecial = new Especial(Especial::tomaDos, unColor);
+		for (int k = 0; k < 2; k++) {
+			unaLista->addRandom(unEspecial);
+		}
+
+		unEspecial = new Especial(Especial::giro, unColor);
+		for (int k = 0; k < 2; k++) {
+			unaLista->addRandom(unEspecial);
+		}
+
+		unEspecial = new Especial(Especial::salta, unColor);
+		for (int k = 0; k < 2; k++) {
+			unaLista->addRandom(unEspecial);
+		}
+	}
+
+	Especial * unEspecial = new Especial(Especial::tomaCuatro, Carta::negro);
+	for (int i = 0; i < 4; i++) {
+		unaLista->addRandom(unEspecial);
+	}
+
+	unEspecial = new Especial(Especial::comodin, Carta::negro);
+	for (int i = 0; i < 4; i++) {
+		unaLista->addRandom(unEspecial);
+	}
+	Pila * laPila = new Pila();
+	for (int i = 0; i < unaLista->getLongitud(); i++) {
+		laPila->push(unaLista->get(i));
+	}
+	
+}
 
 Mazo::~Mazo() {
+
 }
 
 Carta * Mazo::sacarCarta() {
