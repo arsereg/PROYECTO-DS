@@ -54,19 +54,33 @@ Mazo::Mazo() {
 			unaLista->addRandom(unEspecial);
 		}
 	}
-
+	ListaCarta * listaEspeciales = new ListaCarta();
 	Especial * unEspecial = new Especial(Especial::tomaCuatro, Carta::negro);
 	for (int i = 0; i < 4; i++) {
-		unaLista->addRandom(unEspecial);
+		listaEspeciales->addRandom(unEspecial);
+	}
+	
+	unEspecial = new Especial(Especial::comodin, Carta::negro);
+	
+	for (int i = 0; i < 4; i++) {
+		listaEspeciales->addRandom(unEspecial);
 	}
 
-	unEspecial = new Especial(Especial::comodin, Carta::negro);
-	for (int i = 0; i < 4; i++) {
-		unaLista->addRandom(unEspecial);
-	}
 	Pila * laPila = new Pila();
-	for (int i = 0; i < unaLista->getLongitud(); i++) {
-		laPila->push(unaLista->get(i));
+	for (int i = 0; i < rojas->getLongitud(); i++) {
+		laPila->push(rojas->get(i));
+	}
+	for (int i = 0; i < verdes->getLongitud(); i++) {
+		laPila->push(rojas->get(i));
+	}
+	for (int i = 0; i < azules->getLongitud(); i++) {
+		laPila->push(rojas->get(i));
+	}
+	for (int i = 0; i < amarillas->getLongitud(); i++) {
+		laPila->push(rojas->get(i));
+	}
+	for (int i = 0; i < listaEspeciales->getLongitud(); i++) {
+		laPila->push(listaEspeciales->get(i));
 	}
 	
 }
