@@ -33,7 +33,7 @@ void ListaCarta::addRandom(Carta * e)
 	else {
 		std::random_device seeder;
 		std::mt19937 engine(seeder());
-		std::uniform_int_distribution<int> dist(0, longitud -1);
+		std::uniform_int_distribution<int> dist(0, (longitud));
 		int random = dist(engine);
 		NodoCarta * posicion = tope;
 		for (int i = 0; i < random -1; i++) {
@@ -42,6 +42,7 @@ void ListaCarta::addRandom(Carta * e)
 		nuevo->setSig(posicion->getSig());
 		posicion->setSig(nuevo);
 	}
+	longitud++;
 }
 
 NodoCarta * ListaCarta::get(int i)

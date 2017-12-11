@@ -1,9 +1,10 @@
 #include "stdafx.h"
 #include "Pila.h"
+#include "Numero.h"
 
 Pila::Pila() {
-	this->primero = nullptr;
-	this->ultimo = nullptr;
+	this->primero = NULL;
+	this->ultimo = NULL;
 	this->longitud = 0;
 }
 
@@ -48,7 +49,8 @@ bool Pila::push(NodoCarta *e) {
 
 
 NodoCarta* Pila::pop() {
-	NodoCarta *val = this->ultimo;
+	cout << longPila();
+	/*NodoCarta *val = this->ultimo;
 	int index = 0;
 	NodoCarta *auxRecorrido = this->primero;
 	NodoCarta *aux = this->primero;
@@ -60,7 +62,11 @@ NodoCarta* Pila::pop() {
 	this->ultimo = prev;
 	this->ultimo->sig = nullptr;
 	this->longitud--;
-	return val;
+	return val;*/
+
+	Carta * unaCarta = new Numero(1, Carta::rojo);
+	NodoCarta * test = new NodoCarta(unaCarta);
+	return test;
 }
 
 void Pila::recorrer() {

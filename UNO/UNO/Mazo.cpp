@@ -65,7 +65,6 @@ Mazo::Mazo() {
 	for (int i = 0; i < 4; i++) {
 		listaEspeciales->addRandom(unEspecial);
 	}
-
 	Pila * laPila = new Pila();
 	for (int i = 0; i < rojas->getLongitud(); i++) {
 		laPila->push(rojas->get(i));
@@ -90,7 +89,7 @@ Mazo::~Mazo() {
 }
 
 Carta * Mazo::sacarCarta() {
-	NodoCarta *temp = this->cartasPila->pop();
+	NodoCarta *temp = cartasPila->pop();
 	return temp->info;
 }
 

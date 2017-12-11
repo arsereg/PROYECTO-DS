@@ -4,7 +4,7 @@
 class Mazo
 {
 private:
-	Pila* cartasPila;
+	Pila* cartasPila = new Pila();
 public:
 	Mazo(Pila *p);
 	Mazo();

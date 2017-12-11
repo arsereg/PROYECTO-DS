@@ -16,7 +16,7 @@ public:
 	void recorrer();
 
 private:
-	int longitud;
+	int longitud = 0;
 	NodoCarta *primero;
 	NodoCarta *ultimo;
 };
