@@ -143,12 +143,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Buffer.h" />
     <ClInclude Include="Carta.h" />
     <ClInclude Include="Cementerio.h" />
     <ClInclude Include="Cola.h" />
+    <ClInclude Include="ColaBuffer.h" />
     <ClInclude Include="Especial.h" />
     <ClInclude Include="ListaCarta.h" />
     <ClInclude Include="Mazo.h" />
+    <ClInclude Include="NodoBuffer.h" />
     <ClInclude Include="NodoCarta.h" />
     <ClInclude Include="Numero.h" />
     <ClInclude Include="Pila.h" />
@@ -156,12 +159,15 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="Carta.cpp" />
     <ClCompile Include="Cementerio.cpp" />
     <ClCompile Include="Cola.cpp" />
+    <ClCompile Include="ColaBuffer.cpp" />
     <ClCompile Include="Especial.cpp" />
     <ClCompile Include="ListaCarta.cpp" />
     <ClCompile Include="Mazo.cpp" />
+    <ClCompile Include="NodoBuffer.cpp" />
     <ClCompile Include="NodoCarta.cpp" />
     <ClCompile Include="Numero.cpp" />
     <ClCompile Include="Pila.cpp" />
