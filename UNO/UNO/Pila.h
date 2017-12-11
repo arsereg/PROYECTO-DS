@@ -1,8 +1,24 @@
 #pragma once
-class Pila
-{
+#ifndef PILA_H
+#define PILA_H
+#include "NodoCarta.h"
+
+
+class Pila {
 public:
 	Pila();
-	~Pila();
+	Pila(const Pila& orig);
+	virtual ~Pila();
+	int longPila();
+	bool esVacia();
+	bool push(NodoCarta x);
+	NodoCarta pop();
+	void recorrer();
+
+private:
+	int longitud;
+	NodoCarta *primero;
+	NodoCarta *ultimo;
 };
 
+#endif /* PILA_H */
