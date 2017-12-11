@@ -143,10 +143,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Carta.h" />
+    <ClInclude Include="Cementerio.h" />
+    <ClInclude Include="Cola.h" />
+    <ClInclude Include="Especial.h" />
+    <ClInclude Include="Mazo.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="Numero.h" />
+    <ClInclude Include="Pila.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Carta.cpp" />
+    <ClCompile Include="Cementerio.cpp" />
+    <ClCompile Include="Cola.cpp" />
+    <ClCompile Include="Especial.cpp" />
+    <ClCompile Include="Mazo.cpp" />
+    <ClCompile Include="Numero.cpp" />
+    <ClCompile Include="Pila.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
