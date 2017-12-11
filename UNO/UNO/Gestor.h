@@ -12,11 +12,13 @@ public:
 	void incp1();
 	void incp2();
 	void restart();
+	void jugar(Player * e);
 	void comenzarJuego();
 private:
 	Player * player1 = new Player();
 	Player * player2 = new Player();
 	Mazo * mazo;
 };
-
 #endif;
+
+
