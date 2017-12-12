@@ -53,16 +53,25 @@ NodoCarta* Pila::pop() {
 	NodoCarta *auxRecorrido = this->primero;
 	NodoCarta *aux = this->primero;
 	NodoCarta *prev = aux;
-	while (aux->sig != NULL) {
-		prev = aux;
-		aux = aux->sig;
+	if (this->esVacia()) {
+		//this->longitud--;
+		return val;
 	}
-	this->ultimo = prev;
-	this->ultimo->sig = nullptr;
-	this->longitud--;
+	if (longitud == 1) {
+		this->longitud--;
+		return this->primero;
+	}
+	else {
+		while (aux->sig != NULL) {
+			prev = aux;
+			aux = aux->sig;
+		}
+		this->ultimo = prev;
+		this->ultimo->sig = nullptr;
+		this->longitud--;
+		return val;
+	}
 	return val;
-
-
 }
 
 void Pila::recorrer() {
